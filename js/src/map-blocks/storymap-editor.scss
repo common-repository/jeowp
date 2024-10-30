@@ -1,0 +1,337 @@
+.jeo-mapblock.storymap {
+	.storymap-controls {
+		.story-settings, .slides-settings, .story-settings-hide, .slides-settings-hide  {
+			border-radius: 7px;
+			box-shadow: 1px 3px 4px 0 rgba(0,0,0,.1);
+
+			.heading {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.section-title {
+				font-weight: bold;
+			}
+
+			label.components-checkbox-control__label {
+				font-weight: normal;
+			}
+		}
+
+		.story-settings, .slides-settings {
+			.ck-color-grid {
+				--ck-color-grid-tile-size: 18px;
+				max-height: 250px;
+				overflow: hidden auto;
+			}
+		}
+
+		.story-settings {
+			.ck-editor {
+				margin-bottom: 15px;
+			}
+		}
+
+		.slides-settings {
+			.heading {
+				margin-bottom: 15px;
+			}
+
+			.slide-panel {
+				.input-label {
+					font-size: 14px;
+					font-weight: bold;
+				}
+
+				.ck-editor {
+					margin-bottom: 15px;
+				}
+
+				.flex-center {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+// Legacy code downhere
+
+.jeo-mapblock.storymap {
+	font-family: var(--globalFontFamily), sans-serif;;
+}
+
+.ck.ck-balloon-panel, .ck.ck-toolbar__items {
+	z-index: 9999999 !important;
+}
+
+.ck.ck-toolbar[aria-label="Dropdown toolbar"] {
+	width: 240px;
+}
+
+.ck.ck-content.ck-editor__editable.ck-blurred, .ck.ck-content.ck-editor__editable.ck-focused {
+	height: 300px !important;
+}
+
+
+
+.story-settings {
+	max-width: 30%;
+	margin: 10px;
+	background-color: #fff;
+	position: absolute;
+	top: 50px;
+	padding: 10px;
+	left: calc(45% + 15px);
+
+	.title {
+		label {
+			font-weight: bold;
+		}
+	}
+	.description {
+		label {
+			font-weight: bold;
+		}
+		textarea {
+			height: 150px;
+		}
+	}
+	.input-label {
+		font-size: 12px;
+		font-weight: bold;
+	}
+}
+
+.story-settings-hide {
+	width: 30%;
+	margin: 10px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 15%;
+	padding: 10px;
+	display: flex;
+	left: calc(45% + 15px);
+
+	// .section-title {
+	// 	margin: 0 0 0 15px;
+	// }
+	.show-button {
+		margin-left: auto;
+	}
+}
+
+.current-slide-box {
+	display: flex;
+	flex-direction: row;
+	width: 140px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	position: absolute;
+	right: 50px;
+    top: 10px;
+	padding: 10px;
+	font-size: 14px;
+
+	div {
+		margin: auto;
+		display: flex;
+	}
+}
+.slides-settings {
+	width: 45%;
+	margin: 10px;
+	padding: 10px;
+	position: absolute;
+	top: 50px;
+	// left: calc(30% + 15px);
+	background-color: #fff;
+	.slide-panel {
+		border-left: none;
+		width: 100%;
+		.layer {
+			padding: 10px;
+			margin: 0 0 5px 0;
+			cursor: pointer;
+			width: 100%;
+			p {
+				font-size: 12px;
+				margin: 2px 10px;
+			}
+		}
+		.layers {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.slide {
+		display: flex;
+		flex-direction: row;
+		& > button {
+			border: 1px solid #f0f0f0;
+			border-right: none;
+			background: transparent;
+			height: 56px;
+		}
+		h2 {
+			&::before {
+				background: none;
+				content: none;
+			}
+		}
+	}
+	.add-button {
+		margin-top: 15px;
+		width: 100%;
+		background: rgb(240, 240, 240);
+		&:focus {
+			background: rgb(240, 240, 240);
+		}
+		div {
+			margin: auto;
+			display: flex;
+		}
+		svg {
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-right: 5px;
+		}
+		p {
+			margin: 0 0 0 5px;
+		}
+	}
+	.lock-location-button {
+		margin-top: 15px;
+		width: 100%;
+		background: rgb(240, 240, 240);
+
+		&:focus {
+			background: rgb(240, 240, 240);
+		}
+		div {
+			margin: auto;
+			display: flex;
+		}
+		svg {
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-right: 5px;
+		}
+		p {
+			margin: 0 0 0 5px;
+		}
+	}
+	.preview-button {
+		margin: 15px 0;
+		width: 100%;
+		background: rgb(240, 240, 240);
+		&:focus {
+			background: rgb(240, 240, 240);
+		}
+		div {
+			margin: auto;
+			display: flex;
+		}
+		svg {
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-right: 5px;
+		}
+		p {
+			margin: 0 0 0 5px;
+		}
+	}
+	.remove-button {
+		margin-top: 15px;
+		width: 100%;
+		background: rgb(255, 116, 116);
+		&:focus {
+			background: rgb(255, 116, 116);
+		}
+		div {
+			margin: auto;
+			display: flex;
+		}
+		svg {
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-right: 5px;
+		}
+		p {
+			margin: 0 0 0 5px;
+		}
+	}
+	.slides-container {
+		height: 330px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+}
+.slides-settings-hide {
+	display: flex;
+	width: 45%;
+	// left: calc(30% + 15px);
+	margin: 10px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 15%;
+	padding: 10px;
+
+	// .section-title {
+	// 	margin: 0 0 0 15px;
+	// }
+	.show-button {
+		margin-left: auto;
+	}
+}
+.storymap-controls {
+	// .section-title {
+	// 	margin: 0 0 15px 0;
+	// }
+}
+.search-adress-input {
+	position: absolute;
+	top: 0;
+	left: 10px;
+}
+.tooltip {
+	background-color: white;
+	padding: 10px;
+	display: none !important;
+}
+.lock-location-button {
+	&:hover {
+		~ {
+			.tooltip {
+				display: block !important;
+			}
+		}
+	}
+}
+
+/*
+.slides-container h2.components-panel__body-title:before {
+	display: block;
+   content: "=";
+   font-size: 22px;
+   cursor: grabbing;
+}
+*/
+
+.slides-container h2.components-panel__body-title {
+   display: flex;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   padding: 13px 4px;
+}
+
+
+.editor-styles-wrapper .wp-block[data-type="jeo/storymap"] {
+   max-width: 97%;
+}
